@@ -1,7 +1,5 @@
 import mongoose from 'mongoose';
 
-mongoose.connect(process.env.MONGO_URI)
-
 var Schema=new mongoose.Schema({
     FirstName:{
         type: String,

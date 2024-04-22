@@ -21,10 +21,6 @@ function RecordForm() {
                 Date of Birth
             <input name="DOB" type="date" required></input>
             </label>
-            <label htmlFor="passport">
-                Upload passport
-            <input name="passport" type="image"></input>
-            </label>
             <label htmlFor="gen1">
             <input name="gen1" type="radio"></input>
             Female
@@ -61,6 +57,14 @@ function RecordForm() {
                 Residential Address
             <input name="address" type="text" placeholder="Insert Patients Address" required></input>
             </label>
+        </form>
+    )
+}
+
+function test() {
+    return(
+        <form action="/http://localhost:3000/api/records" method="POST">
+
         </form>
     )
 }

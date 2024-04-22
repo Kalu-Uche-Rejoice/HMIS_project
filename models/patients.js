@@ -1,16 +1,8 @@
-import mongoose from 'mongoose';
+import mongoose, {Schema} from 'mongoose';
 
-mongoose.connect(process.env.MONGO_URI)
-
-var Schema=new mongoose.Schema({
-    ID:{
-        type: mixed,
-        required:true
-    },
-    FirstName:{
-        type: String,
-        required: true
-    },
+var PSchema=new Schema({
+    
+    firstname:String,
     MiddleName:{
         type: String,
         required: false
@@ -37,25 +29,32 @@ var Schema=new mongoose.Schema({
     },
     MedicalHistory:
     {
-        type: stringify,
+        type: String,
         required: true
     },
     ResidentialAdress:{
-        type: stringify,
+        type: String,
         required: true
     },
     PhoneNumber:{
-        type: stringify,
+        type: String,
         required: true
     },
     Occupation:{
-        type: stringify,
+        type: String,
          required: true
     },
     MaritalStatus:{
-        type: stringify,
+        type: String,
         required: true
-    }
-});
+    },
+   
+},
+{
+    timestamps: true
+}
+);
 
-const PatientSchema = mongoose.Model("PatientSchema",Schema)
+const Patients = mongoose.models.PatientSchema || mongoose.model("Patients", PSchema)
+
+export default Patients

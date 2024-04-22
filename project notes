@@ -1,0 +1,10 @@
+When there is a new patient the person has a record created at the records department and then a flag is set to not paid
+they go to the accounts and pay then the flag is unset and they are booked for vitals checking.
+
+When an old patient  comes we find their record based on their id, doing this sets their payment flag to not paid
+send to accounts for paying consultation and 
+booking for vitals 
+
+Super admin dashboard to kow the no of patients, the attending units and physicians per time
+
+After pharm dispenses drugs we clear the id active title
