@@ -1,7 +1,9 @@
+import { Binary } from 'mongodb';
 import mongoose, {Schema} from 'mongoose';
 
+
 var PSchema=new Schema({
-    
+    HospitalNumber:String,
     firstname:String,
     MiddleName:{
         type: String,
@@ -19,6 +21,7 @@ var PSchema=new Schema({
         type: Date,
         required: true
     },
+    Gender:String,
     Nationality:{
         type: String,
         required: true
@@ -47,14 +50,14 @@ var PSchema=new Schema({
     MaritalStatus:{
         type: String,
         required: true
-    },
-   
+    },  
+    AccountsCleared : Boolean 
 },
 {
     timestamps: true
 }
 );
 
-const Patients = mongoose.models.PatientSchema || mongoose.model("Patients", PSchema)
+const Patients = mongoose.models.Patients || mongoose.model("Patients", PSchema)
 
 export default Patients

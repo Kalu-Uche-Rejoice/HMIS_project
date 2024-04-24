@@ -8,3 +8,49 @@ booking for vitals
 Super admin dashboard to kow the no of patients, the attending units and physicians per time
 
 After pharm dispenses drugs we clear the id active title
+
+MiddleName:{
+        type: String,
+        required: false
+    },
+    LastName:{
+        type: String,
+        required: true
+    },
+    Age:{
+        type: Number,
+        required: true
+    },
+    DateOfBirth:{
+        type: Date,
+        required: true
+    },
+    Nationality:{
+        type: String,
+        required: true
+    },
+    StateOfOrigin:{
+        type: String,
+        required: true
+    },
+    MedicalHistory:
+    {
+        type: String,
+        required: true
+    },
+    ResidentialAdress:{
+        type: String,
+        required: true
+    },
+    PhoneNumber:{
+        type: String,
+        required: true
+    },
+    Occupation:{
+        type: String,
+         required: true
+    },
+    MaritalStatus:{
+        type: String,
+        required: true
+    }
