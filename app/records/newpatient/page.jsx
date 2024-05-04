@@ -1,10 +1,9 @@
 "use client";
 import { useState } from "react";
-import RecordForm from "../components/records";
 import { useRouter } from "next/navigation";
 
+
 export default ()=>{
-    console.log("hi")
     const [firstname, setFirstName]= useState("");
     const [MiddleName, setMiddleName]= useState("");
     const [LastName, setLastName]= useState("");
@@ -19,7 +18,7 @@ export default ()=>{
     const [Occupation, setOccupation]= useState("");
     const [MaritalStatus, setMaritalStatus]= useState("");
 
-    const router = useRouter
+    const router = useRouter()
 
     const handleSubmit= async (e)=>{
         e.preventDefault()
@@ -36,7 +35,7 @@ export default ()=>{
            ! PhoneNumber||
            ! Occupation||
            ! MaritalStatus){
-            alert( "There is an error from our end");
+            alert( "All fields are required");
            }
 
         try {
@@ -61,9 +60,17 @@ export default ()=>{
              MaritalStatus,
             })
         });
+        //alert("New patient record created")
+        //router.push('/records')
+        if (res.ok) {
+            alert("new patient record created")
+            router.push('/');
+         }else{
+                throw new Error ('Failed to create patient record')
+            }
 
         } catch (error) {
-            
+            console.log(error)
         }
     }
     return(
@@ -122,31 +129,31 @@ export default ()=>{
             />
             </label>
             
-                <div className="border border-black w-fit">
-                    Gender
-                    <br></br>
-                <label htmlFor="MALE"> MALE
+                <fieldset className="border border-black w-fit">
+                   <legend>Gender</legend>
+                <label htmlFor="MALE"> MALE</label>
                     <input 
                         type="radio"   
                         id="MALE" 
-                        name="Male" 
+                        name="GENDER" 
                         value="MALE"
                         onChange={(e)=>setGender(e.target.value)}
                     />
-                </label>
-                <label htmlFor="FEMALE"> FEMALE
+                
+                <label htmlFor="FEMALE"> FEMALE</label>
                     <input 
                         type="radio" 
                         id="FEMALE" 
-                        name="Female" 
+                        name="GENDER" 
                         value="FEMALE"
                         onChange={(e)=>setGender(e.target.value)}
                     />
-                </label>
-                </div>
+                
+                </fieldset>
+
                 <label htmlFor="Nationality">
                 Nationality
-            <input 
+                <input 
                 name="Nationality" 
                 type="text" 
                 placeholder="Insert Patients Nationality" 

@@ -19,7 +19,7 @@ const handleSubmit = async(e)=>{
 export default function Home() {
   return (
     <main>
-      <div>
+      <div className="">
       <form //onSubmit={handleSubmit}
       >
         <label htmlFor="username">

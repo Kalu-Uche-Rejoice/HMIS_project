@@ -9,48 +9,15 @@ Super admin dashboard to kow the no of patients, the attending units and physici
 
 After pharm dispenses drugs we clear the id active title
 
-MiddleName:{
-        type: String,
-        required: false
-    },
-    LastName:{
-        type: String,
-        required: true
-    },
-    Age:{
-        type: Number,
-        required: true
-    },
-    DateOfBirth:{
-        type: Date,
-        required: true
-    },
-    Nationality:{
-        type: String,
-        required: true
-    },
-    StateOfOrigin:{
-        type: String,
-        required: true
-    },
-    MedicalHistory:
-    {
-        type: String,
-        required: true
-    },
-    ResidentialAdress:{
-        type: String,
-        required: true
-    },
-    PhoneNumber:{
-        type: String,
-        required: true
-    },
-    Occupation:{
-        type: String,
-         required: true
-    },
-    MaritalStatus:{
-        type: String,
-        required: true
-    }
+25/ 04/ 2024
+HMIS coding session plan
+
+1. to complete the records portion
+    a. to create new patient record
+        i. after creating new record continue to dashboard
+        ii. before adding record to data base we need to confirm that such a record does not exist,
+            if it does then an alert should be send to the front end saying that the record exists already
+            then the user is redirected to the find patient record where the record is displayed
+    b. to edit old patient record
+    c. to find old patient record
+    d. to create dashboard
