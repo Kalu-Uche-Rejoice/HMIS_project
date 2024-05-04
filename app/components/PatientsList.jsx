@@ -1,5 +1,4 @@
-export default function PatientsList(){
-
+export default async function PatientsList(query){
     return(
         <section>
             <div className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start">

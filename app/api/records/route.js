@@ -69,10 +69,7 @@ export async function POST(request) {
 
 //find old record
 
-export async function POSTSEARCH(request){
-    console.log(request.body)
-    return NextResponse.json({message: "test is validated"}, {status: 200})
-}
+
 
 export async function GET(request) {
     //let search = request.body.search()
