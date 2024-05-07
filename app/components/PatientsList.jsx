@@ -1,9 +1,20 @@
-export default async function PatientsList(query){
-    return(
-        <section>
+
+export default async function PatientsList(props){
+    let results = props.patients
+    console.log(typeof(results[0]))
+    function convertObjectToArray(obj) {
+        return Object.keys(obj).map(key => obj[key]);
+      }
+      const array = convertObjectToArray(results);
+    return( 
+        array.forEach(element => {
+            <h2 className="font-bold text-2xl">forget</h2>
+            console.log(element.Age)
+        })
+        /*<section>
             <div className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start">
                 <div>
-                    <h2 className="font-bold text-2xl">Patient Name</h2>
+                    <h2 className="font-bold text-2xl">forget</h2>
                     <div className="hidden">
                         <table>
                             <tr>
@@ -73,7 +84,7 @@ export default async function PatientsList(query){
                     </div>
                 </div>
             </div>
-        </section>
+        </section>*/
     )
 
 }
