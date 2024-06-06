@@ -11,7 +11,7 @@ export default async function Page(params) {
     return (
       <>
         <Search />
-        {result.length > 0 ? (
+        {result.length >0 ? (
           <PatientsList patients={result} />  //Pass results as patients prop
          //<PatientsList/>
         ) : (

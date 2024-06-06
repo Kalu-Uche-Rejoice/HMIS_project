@@ -38,7 +38,6 @@ export default function Search(){
                 defaultValue={searchparams.get('query')?.toString()}
             />
             <button
-                type="submit"
                 className="bg-cyan-900"
             >search</button>
         </form>
